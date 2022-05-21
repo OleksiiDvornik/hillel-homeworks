@@ -14,13 +14,4 @@ const someFunc = () => {
     }
 };
 
-//Вариант решения 2
-
-// const someFunc = () => {
-//     for (let key in menu) {
-//         if (!isNaN(menu[key])) {
-//             console.log(`${key} = ${menu[key]*2}`)
-//         }
-//     }
-// };
 
