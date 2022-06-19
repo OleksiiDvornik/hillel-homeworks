@@ -7,6 +7,7 @@ const condition4 = document.querySelector('.js--item4');
 const regExNum = /\d/;
 const regExLetter = /[A-ZА-Я]/;
 const regExPunc = /[\W_]/;
+const regExLength = /.{8,}/
 
 let value;
 
@@ -24,10 +25,5 @@ password.addEventListener('input', function () {
     matchValue(regExLetter, condition1);
     matchValue(regExNum, condition2);
     matchValue(regExPunc, condition3);
-    if (value.length >= 8) {
-        console.log(value);
-        condition4.classList.add('list__item--green')
-    } else {
-        condition4.classList.remove('list__item--green')
-    }
+    matchValue(regExLength, condition4);
 })
