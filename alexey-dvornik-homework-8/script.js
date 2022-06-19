@@ -12,7 +12,7 @@ function cardRotate() {
 cardRotate();
 
 function FormValidate (form) {
-    this.setNumber = function (selector) {
+    this.addNumber = function (selector) {
         form.number.addEventListener('input', function() {
             const value = this.value;
             document.querySelector(selector).innerHTML = value.replace(/(.{4})/g, '$1 ').slice(0, 19);
@@ -21,7 +21,7 @@ function FormValidate (form) {
             }
         })
     }
-    this.setHolder = function (selector) {
+    this.addHolder = function (selector) {
         form.holder.addEventListener('input', function() {
             const value = this.value.split(/\s/, 2);
             document.querySelector(selector).innerHTML = value.join(' ').replace(/\d/g, '');
@@ -32,12 +32,12 @@ function FormValidate (form) {
             }
         })
     }
-    this.setDate = function (dateType, selector) {
+    this.addDate = function (dateType, selector) {
         dateType.addEventListener('input', function() {
             document.querySelector(selector).innerHTML = this.value;
         })
     }
-    this.setCVV = function (selector) {
+    this.addCVV = function (selector) {
         form.cvv.addEventListener('input', function () {
             const value = this.value;
             document.querySelector(selector).innerHTML = value.slice(0, 3);
@@ -67,11 +67,11 @@ const form = document.querySelector('.form');
 
 const formValidate = new FormValidate (formFields);
 
-formValidate.setNumber('.js--res-number');
-formValidate.setHolder('.js--res-holder');
-formValidate.setDate(formFields.month, '.js--res-month');
-formValidate.setDate(formFields.year, '.js--res-year');
-formValidate.setCVV('.js--res-cvv');
+formValidate.addNumber('.js--res-number');
+formValidate.addHolder('.js--res-holder');
+formValidate.addDate(formFields.month, '.js--res-month');
+formValidate.addDate(formFields.year, '.js--res-year');
+formValidate.addCVV('.js--res-cvv');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -82,3 +82,4 @@ form.addEventListener('submit', (event) => {
     CVV: ${formFields.cvv.value}
     `)
 })
+
