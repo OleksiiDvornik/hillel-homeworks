@@ -36,11 +36,11 @@
 }
 
 .slider__button--prev {
-    background-image: url('./img/prev-arrow.png');
+    background-image: url('img/prev-arrow.png');
 }
 
 .slider__button--next {
-    background-image: url('./img/next-arrow.png');
+    background-image: url('img/next-arrow.png');
 }
 
 .slider__list {
