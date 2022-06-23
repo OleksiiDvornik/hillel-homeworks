@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Helvetica', 'sans-serif';
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.container {
+    min-width: 768px;
+    margin: 0 auto;
+}
+
+.clock {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock__content {
+    color: #FFFFFF;
+    font-size: 96px;
+}
+
+.clock__control {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.clock__btn {
+    font-family: 'Helvetica', 'sans-serif';
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 15px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 0, 0.2);
+    background-color: #FBAB7E;
+    transition: box-shadow 0.2s;
+}
+
+.clock__btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
