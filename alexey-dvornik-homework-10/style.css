@@ -3,17 +3,21 @@ table {
     margin: auto;
     border-collapse: collapse;
 }
+
+
 table th,
 table td {
     border: 1px solid;
 }
+
 .card {
     max-width: 400px;
     margin: auto;
     margin-bottom: 20px;
+    overflow: auto;
 }
 .card--user {
-    /*display: none !important;*/
+    display: none !important;
 }
 .card--user.open {
     display: block !important;
