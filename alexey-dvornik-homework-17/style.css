@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Helvetica', 'sans-serif';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    padding: 50px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #2c3e50;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.form {
+    margin-bottom: 30px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgba(160, 160, 160, 0.3);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form__btn {
+    width: 100%;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2c3e50;
+    border: 2px solid rgba(160, 160, 160, 0.3);
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.form__btn:hover:enabled, .form__btn:focus:enabled {
+    outline: none;
+    cursor: pointer;
+    background-color: #1D976C;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2c3e50;
+    margin-bottom: 20px;
+}
+
+.feed {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.post {
+    border: 1px solid #1D976C;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.post__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.post__title:first-letter {
+    text-transform: capitalize;
+}
+
+.post__content {
+    padding-bottom: 18px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.post__content:first-letter {
+    text-transform: capitalize;
+}
+
+.comment {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    grid-template-areas: 'content content'
+                         'name email';
+    margin-bottom: 20px;
+}
+
+.comment:last-child {
+    margin-bottom: 0;
+}
+
+.comment__body {
+    grid-area: content;
+    font-size: 16px;
+    justify-self: auto;
+}
+
+.comment__name {
+    grid-area: name;
+    justify-self: start;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.comment__email {
+    grid-area: email;
+    justify-self: end;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
