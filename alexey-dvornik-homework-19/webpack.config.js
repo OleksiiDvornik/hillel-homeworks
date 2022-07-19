@@ -6,7 +6,7 @@ const minifyJS = require("terser-webpack-plugin");
 
 module.exports = {
     mode: "production",
-    entry: "./src/index.js",
+    entry: "./src/app.js",
     output: {
         path: path.join(__dirname, "dist"),
         filename: "index.min.js",
