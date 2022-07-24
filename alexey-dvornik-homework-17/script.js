@@ -22,7 +22,7 @@ function PostsLoader (params) {
                 data: await response.json(),
             }
         } catch (error) {
-            return Error(error);
+            return new Error("error");
         }
     };
 
@@ -39,10 +39,9 @@ function PostsLoader (params) {
         } else alert('Пост не найден');
     };
 
-    this.showComments = async (response, postID) => {
+    this.showComments = (response, postID) => {
         const commentsFeed = document.getElementById(postID.toString());
         const comments = response.data;
-        console.log(comments);
         for (const comment of comments) {
             this.renderComment(comment, commentsFeed);
         }
@@ -56,7 +55,7 @@ function PostsLoader (params) {
                 <p class="comment__email">${comment.email}</p>
             </div>`
         ))
-    }
+    };
 }
 
 const postsLoader = new PostsLoader({
